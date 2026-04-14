@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Support page for Joker’s Sparkle Party by Digital Excellence Apps Development Studio." />
+  <title>Support | Joker’s Sparkle Party</title>
+  <style>
+    :root {
+      --bg: #07131a;
+      --bg2: #0d1d27;
+      --card: rgba(255,255,255,0.06);
+      --text: #f2fcff;
+      --muted: #c6dde4;
+      --accent: #00d2c8;
+      --accent2: #73f0ff;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 18px 50px rgba(0,0,0,0.34);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(0,210,200,0.17), transparent 30%),
+        radial-gradient(circle at 100% 10%, rgba(115,240,255,0.14), transparent 28%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+      min-height: 100vh;
+    }
+    .wrap { width: min(calc(100% - 24px), 1020px); margin: 0 auto; }
+    .nav {
+      display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 0; flex-wrap: wrap;
+    }
+    .nav a {
+      color: var(--text); text-decoration: none; padding: 10px 14px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09);
+    }
+    .hero {
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; padding: 16px 0 20px;
+    }
+    .panel {
+      padding: 26px; border-radius: 28px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow);
+    }
+    h1 { margin: 0 0 12px; font-size: clamp(2rem, 6vw, 3.8rem); line-height: 1; }
+    h2 { margin-top: 0; }
+    p, li { color: var(--muted); line-height: 1.75; }
+    .contact-box {
+      display: grid; gap: 14px; margin-top: 18px;
+    }
+    .contact-item {
+      padding: 14px 16px; border-radius: 18px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    }
+    .grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; padding-bottom: 34px;
+    }
+    .grid .panel.full { grid-column: 1 / -1; }
+    .cta {
+      display: inline-block; margin-top: 12px; color: var(--text); text-decoration: none; padding: 12px 16px; border-radius: 999px;
+      background: linear-gradient(135deg, rgba(0,210,200,0.35), rgba(115,240,255,0.24)); border: 1px solid rgba(255,255,255,0.12);
+    }
+    ul { padding-left: 18px; }
+    @media (max-width: 760px) {
+      .hero, .grid { grid-template-columns: 1fr; }
+      .panel { padding: 20px; border-radius: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+      <a href="marketing.html">Marketing</a>
+    </nav>
+
+    <section class="hero">
+      <article class="panel">
+        <h1>Support</h1>
+        <p>
+          This page provides a direct support channel for users of <strong>Joker’s Sparkle Party</strong>.
+          The goal is to make communication easy, transparent, and accessible.
+        </p>
+        <div class="contact-box">
+          <div class="contact-item"><strong>Developer:</strong> Digital Excellence Apps Development Studio</div>
+          <div class="contact-item"><strong>Support Email:</strong> <a href="mailto:janashaho647@gmail.com">janashaho647@gmail.com</a></div>
+          <div class="contact-item"><strong>App:</strong> Joker’s Sparkle Party</div>
+        </div>
+        <a class="cta" href="mailto:janashaho647@gmail.com?subject=Support%20Request%20-%20Joker%E2%80%99s%20Sparkle%20Party">Contact Support</a>
+      </article>
+
+      <aside class="panel">
+        <h2>What You Can Write About</h2>
+        <ul>
+          <li>Technical issues or unexpected behavior</li>
+          <li>Questions about app usage</li>
+          <li>Suggestions for improvements</li>
+          <li>General feedback about the app experience</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <h2>Support Approach</h2>
+        <p>
+          As an independent developer, I aim to respond with respect, clarity, and a genuine effort to improve the product.
+          Every message helps shape future updates and improvements.
+        </p>
+      </article>
+
+      <article class="panel">
+        <h2>Transparency</h2>
+        <p>
+          This support page is part of a broader effort to present a clear and honest picture of the developer account.
+          Public information about privacy and project direction is available on the linked pages.
+        </p>
+      </article>
+
+      <article class="panel full">
+        <h2>Helpful Links</h2>
+        <p>
+          Use the pages below to learn more about the privacy model, developer overview, and the long-term vision for the project.
+        </p>
+        <p>
+          <a class="cta" href="privacy-policy.html">Privacy Policy</a>
+          <a class="cta" href="marketing.html">Marketing Page</a>
+          <a class="cta" href="index.html">Developer Overview</a>
+        </p>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

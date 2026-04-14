@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marketing and project vision page for Joker’s Sparkle Party by Digital Excellence Apps Development Studio." />
+  <title>Marketing | Joker’s Sparkle Party</title>
+  <style>
+    :root {
+      --bg: #130818;
+      --bg2: #261032;
+      --card: rgba(255,255,255,0.07);
+      --text: #fff3ff;
+      --muted: #ead5ef;
+      --accent: #ff61c7;
+      --accent2: #ffc04d;
+      --accent3: #8a7dff;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 20px 55px rgba(0,0,0,0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(255,97,199,0.16), transparent 30%),
+        radial-gradient(circle at 85% 0%, rgba(255,192,77,0.14), transparent 26%),
+        radial-gradient(circle at 50% 100%, rgba(138,125,255,0.16), transparent 28%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+      min-height: 100vh;
+    }
+    .wrap { width: min(calc(100% - 24px), 1040px); margin: 0 auto; }
+    .nav {
+      display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 0; flex-wrap: wrap;
+    }
+    .nav a {
+      color: var(--text); text-decoration: none; padding: 10px 14px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09);
+    }
+    .hero {
+      padding: 28px; border-radius: 30px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow); margin: 14px 0 20px; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: "🎊"; position: absolute; right: 20px; top: 10px; font-size: clamp(4rem, 12vw, 7rem); opacity: .12; transform: rotate(8deg);
+    }
+    h1 { margin: 0 0 14px; font-size: clamp(2.1rem, 6vw, 4rem); line-height: .98; }
+    h2 { margin-top: 0; }
+    p, li { color: var(--muted); line-height: 1.8; }
+    .shine {
+      display: inline-block; padding: 8px 12px; border-radius: 999px; margin-bottom: 14px;
+      background: linear-gradient(135deg, rgba(255,97,199,0.18), rgba(255,192,77,0.16));
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .grid {
+      display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; padding-bottom: 34px;
+    }
+    .panel {
+      grid-column: span 6; padding: 24px; border-radius: 24px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow);
+      transition: transform .25s ease;
+    }
+    .panel:hover { transform: translateY(-4px); }
+    .panel.full { grid-column: 1 / -1; }
+    .meter {
+      margin-top: 16px; height: 14px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden;
+    }
+    .meter > span {
+      display: block; width: 78%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+      animation: glow 3s ease-in-out infinite;
+    }
+    @keyframes glow {
+      0%,100% { transform: scaleX(1); filter: brightness(1); }
+      50% { transform: scaleX(.96); filter: brightness(1.15); }
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .links a {
+      color: var(--text); text-decoration: none; padding: 11px 15px; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.11);
+    }
+    @media (max-width: 760px) {
+      .panel, .panel.full { grid-column: 1 / -1; }
+      .hero, .panel { padding: 20px; border-radius: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+      <a href="marketing.html">Marketing</a>
+    </nav>
+
+    <section class="hero">
+      <div class="shine">Independent developer story</div>
+      <h1>Project Vision & Marketing Information</h1>
+      <p>
+        <strong>Joker’s Sparkle Party</strong> is part of an early-stage independent development journey by <strong>Digital Excellence Apps Development Studio</strong>.
+        This page explains the spirit of the project, the current state of monetization, and the value the developer aims to create.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <h2>A Beginning Developer Journey</h2>
+        <p>
+          I am a beginning developer who is working hard to improve with every release. This application is being built with care,
+          persistence, and a strong desire to create something enjoyable and useful for real users.
+        </p>
+      </article>
+
+      <article class="panel">
+        <h2>Current Monetization Status</h2>
+        <p>
+          At the moment, the app does not include paid features, premium unlocks, or subscription plans.
+          The current goal is to focus on building quality, trust, and a positive user experience first.
+        </p>
+      </article>
+
+      <article class="panel">
+        <h2>Future Plans</h2>
+        <p>
+          In the future, paid features or subscriptions may be introduced as the project grows. The purpose of that future monetization would be
+          to support continued development, maintenance, and long-term improvement of the app.
+        </p>
+      </article>
+
+      <article class="panel">
+        <h2>Value for Users</h2>
+        <p>
+          The intention behind this project is not only to publish an app, but to bring real value through thoughtful design, ongoing effort,
+          and visible improvement over time. User trust and a clear public presentation are an important part of that value.
+        </p>
+        <div class="meter" aria-label="Development effort indicator"><span></span></div>
+      </article>
+
+      <article class="panel full">
+        <h2>Open and Honest Presentation</h2>
+        <p>
+          This page is intentionally direct. It shows that the developer is still growing, is actively investing effort into the product,
+          and plans to build a sustainable future around the app in a transparent way. The related pages on this site provide additional context
+          about privacy, support, and developer identity.
+        </p>
+        <div class="links">
+          <a href="index.html">Developer Overview</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="support.html">Support</a>
+          <a href="mailto:janashaho647@gmail.com">Contact Developer</a>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
