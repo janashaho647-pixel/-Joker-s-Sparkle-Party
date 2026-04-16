@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Developer and app overview for Joker’s Sparkle Party by Digital Excellence Apps Development Studio." />
-  <title>Developer & App Overview | Joker’s Sparkle Party</title>
+  <meta name="description" content="Official developer and app overview for Joker’s Sparkle Party by Digital Excellence Apps Development Studio." />
+  <title>Joker’s Sparkle Party | Developer Overview</title>
   <style>
     :root {
-      --bg: #0b1020;
-      --bg-soft: rgba(255,255,255,0.08);
-      --card: rgba(14, 21, 43, 0.72);
-      --text: #edf3ff;
-      --muted: #b6c2df;
-      --accent: #7c5cff;
-      --accent-2: #00d4ff;
-      --accent-3: #ff4fd8;
-      --border: rgba(255,255,255,0.14);
-      --shadow: 0 20px 60px rgba(0,0,0,0.35);
-      --radius: 24px;
-      --radius-sm: 16px;
-      --max: 1120px;
+      --bg-1: #07111f;
+      --bg-2: #130d2d;
+      --panel: rgba(16, 23, 43, 0.72);
+      --panel-strong: rgba(22, 29, 54, 0.9);
+      --text: #ecf3ff;
+      --muted: #b8c4dd;
+      --line: rgba(255,255,255,0.12);
+      --accent-1: #7c5cff;
+      --accent-2: #15d0ff;
+      --accent-3: #ff59b2;
+      --success: #7ef0c6;
+      --shadow: 0 24px 60px rgba(0,0,0,0.35);
+      --radius: 26px;
+      --radius-sm: 18px;
+      --max: 1180px;
     }
-
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
@@ -29,369 +30,352 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(124,92,255,0.22), transparent 32%),
-        radial-gradient(circle at top right, rgba(0,212,255,0.18), transparent 28%),
-        radial-gradient(circle at 50% 120%, rgba(255,79,216,0.12), transparent 36%),
-        linear-gradient(160deg, #09101e 0%, #0d1430 55%, #070b17 100%);
+        radial-gradient(circle at 12% 18%, rgba(21,208,255,0.16), transparent 28%),
+        radial-gradient(circle at 88% 24%, rgba(124,92,255,0.22), transparent 26%),
+        radial-gradient(circle at 70% 82%, rgba(255,89,178,0.14), transparent 24%),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2) 55%, #090d18 100%);
       min-height: 100vh;
       overflow-x: hidden;
     }
-
     body::before,
     body::after {
       content: "";
       position: fixed;
       inset: auto;
-      width: 240px;
-      height: 240px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
-      filter: blur(55px);
-      opacity: 0.25;
+      filter: blur(70px);
+      opacity: 0.22;
       pointer-events: none;
       z-index: 0;
-      animation: floatBlob 10s ease-in-out infinite;
     }
-
-    body::before {
-      top: 8%;
-      left: -70px;
-      background: var(--accent-2);
-    }
-
-    body::after {
-      right: -60px;
-      bottom: 8%;
-      background: var(--accent-3);
-      animation-delay: -4s;
-    }
-
-    @keyframes floatBlob {
-      0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-22px) scale(1.08); }
-    }
-
-    .wrap {
-      position: relative;
-      z-index: 1;
-      width: min(calc(100% - 28px), var(--max));
-      margin: 0 auto;
-    }
-
-    .topbar {
+    body::before { top: 110px; left: -100px; background: var(--accent-2); }
+    body::after { right: -90px; bottom: 60px; background: var(--accent-3); }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; position: relative; z-index: 1; }
+    .site-header {
       position: sticky;
       top: 0;
-      z-index: 10;
-      backdrop-filter: blur(14px);
-      background: rgba(7, 11, 23, 0.55);
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(7, 13, 27, 0.72);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-
-    .nav {
+    .nav-shell {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      padding: 14px 0;
+      gap: 18px;
+      min-height: 84px;
     }
-
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
+      gap: 14px;
+      min-width: 0;
     }
-
     .brand-badge {
-      width: 38px;
-      height: 38px;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
       display: grid;
       place-items: center;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-3));
-      box-shadow: 0 12px 28px rgba(124, 92, 255, 0.35);
-      font-size: 1.1rem;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-3));
+      box-shadow: 0 10px 24px rgba(124,92,255,0.35);
+      font-size: 1.3rem;
     }
-
+    .brand-text { min-width: 0; }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #95a7ca;
+      margin-bottom: 4px;
+    }
+    .brand-title {
+      font-size: 1rem;
+      font-weight: 800;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .nav-toggle {
+      display: none;
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      cursor: pointer;
+      padding: 0;
+    }
+    .nav-toggle span,
+    .nav-toggle::before,
+    .nav-toggle::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: white;
+      margin: 5px auto;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+    #navcheck { display: none; }
     .nav-links {
       display: flex;
+      align-items: center;
+      gap: 12px;
       flex-wrap: wrap;
-      gap: 10px;
-      justify-content: flex-end;
     }
-
-    .nav-links a,
-    .button {
-      color: var(--text);
-      text-decoration: none;
-      padding: 10px 14px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: rgba(255,255,255,0.05);
+    .nav-link {
+      position: relative;
+      padding: 12px 18px;
+      border: 1px solid var(--line);
       border-radius: 999px;
-      transition: transform .25s ease, border-color .25s ease, background .25s ease;
-      font-size: 0.95rem;
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+      transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
     }
-
-    .nav-links a:hover,
-    .button:hover {
+    .nav-link:hover,
+    .nav-link.active {
+      color: white;
       transform: translateY(-2px);
-      border-color: rgba(255,255,255,0.28);
-      background: rgba(255,255,255,0.09);
+      border-color: rgba(126, 240, 198, 0.35);
+      background: linear-gradient(135deg, rgba(124,92,255,0.24), rgba(21,208,255,0.14));
     }
-
     .hero {
-      padding: 38px 0 22px;
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 20px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      padding: 36px 0 22px;
       align-items: stretch;
     }
-
-    .glass,
-    .tile {
-      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-    }
-
-    .hero-main {
-      padding: 30px;
+      box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
-      min-height: 360px;
     }
-
-    .hero-main::after {
-      content: "✨";
+    .card::before {
+      content: "";
       position: absolute;
-      right: 26px;
-      bottom: 22px;
-      font-size: clamp(4rem, 10vw, 7rem);
-      opacity: 0.16;
-      transform: rotate(-8deg);
+      inset: 0;
+      background: linear-gradient(130deg, rgba(124,92,255,0.12), transparent 45%, rgba(21,208,255,0.08) 75%, transparent);
+      pointer-events: none;
     }
-
-    .eyebrow {
+    .hero-main { padding: 30px; min-height: 100%; }
+    .pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
+      gap: 10px;
+      padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(124,92,255,0.15);
-      border: 1px solid rgba(124,92,255,0.28);
-      color: #d8d0ff;
+      background: rgba(126, 240, 198, 0.08);
+      border: 1px solid rgba(126, 240, 198, 0.22);
+      color: #cbffe9;
       font-size: 0.92rem;
       margin-bottom: 18px;
     }
-
+    h1, h2, h3, p { margin-top: 0; }
     h1 {
-      margin: 0 0 14px;
-      font-size: clamp(2rem, 6vw, 4.2rem);
-      line-height: 0.96;
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      line-height: 0.95;
+      margin-bottom: 20px;
       letter-spacing: -0.04em;
+      max-width: 10ch;
     }
-
     .gradient-text {
-      background: linear-gradient(90deg, #ffffff 0%, #98eaff 35%, #ffb8ef 75%, #ffffff 100%);
+      background: linear-gradient(90deg, #ffffff 0%, #b8dbff 30%, #82f0ff 60%, #ffc1df 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-
     .lead {
-      margin: 0 0 22px;
-      max-width: 64ch;
       color: var(--muted);
-      font-size: 1.03rem;
-      line-height: 1.7;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      max-width: 62ch;
     }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .btn {
+      padding: 14px 18px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: white;
+      font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
-
-    .button.primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,0.22); }
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-3));
       border-color: transparent;
-      box-shadow: 0 12px 32px rgba(124,92,255,0.28);
     }
-
     .hero-side {
       display: grid;
-      gap: 16px;
+      gap: 18px;
     }
-
-    .tile {
-      padding: 22px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .tile h2, .section h2 {
-      margin: 0 0 10px;
-      font-size: 1.16rem;
-    }
-
-    .tile p, .section p, li {
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .sparkline {
-      height: 10px;
-      margin-top: 14px;
+    .mini-card { padding: 24px; }
+    .mini-card p { color: var(--muted); line-height: 1.8; margin-bottom: 0; }
+    .accent-line {
+      width: 100%;
+      height: 8px;
       border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
-      box-shadow: 0 0 24px rgba(0,212,255,0.28);
-      animation: pulse 2.5s ease-in-out infinite;
+      margin-top: 18px;
+      background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
     }
-
-    @keyframes pulse {
-      0%, 100% { transform: scaleX(1); opacity: 1; }
-      50% { transform: scaleX(.94); opacity: .8; }
-    }
-
     .grid {
       display: grid;
-      gap: 18px;
-      grid-template-columns: repeat(12, 1fr);
-      padding: 8px 0 42px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      padding-bottom: 36px;
     }
-
-    .section {
-      grid-column: span 6;
-      padding: 26px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition: transform .25s ease, border-color .25s ease;
+    .section-card { padding: 26px; }
+    .section-card p { color: var(--muted); line-height: 1.8; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .chip {
+      border-radius: 999px;
+      padding: 10px 13px;
+      background: rgba(21,208,255,0.08);
+      border: 1px solid rgba(21,208,255,0.22);
+      color: #d7fbff;
+      font-size: 0.94rem;
     }
-
-    .section:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255,255,255,0.24);
-    }
-
-    .full { grid-column: 1 / -1; }
-
-    .info-list {
-      display: grid;
+    .details-list { display: grid; gap: 12px; margin-top: 18px; }
+    .detail {
+      display: flex;
+      justify-content: space-between;
       gap: 14px;
-      margin-top: 18px;
-    }
-
-    .info-item {
-      display: grid;
-      grid-template-columns: 130px 1fr;
-      gap: 10px;
       padding: 14px 16px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
     }
-
-    .label {
-      color: #dce5ff;
-      font-weight: 600;
+    .detail span:first-child { color: #9caecc; }
+    .detail span:last-child { font-weight: 700; text-align: right; }
+    .spotlight {
+      margin: 0 0 40px;
+      padding: 26px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(124,92,255,0.18), rgba(21,208,255,0.12));
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: var(--shadow);
     }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .chip {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(0,212,255,0.09);
-      border: 1px solid rgba(0,212,255,0.24);
-      color: #d8f8ff;
-      font-size: .94rem;
-    }
-
     .footer {
-      padding: 10px 0 34px;
-      color: var(--muted);
+      padding: 0 0 40px;
+      color: #96a6c5;
+      text-align: center;
       font-size: 0.95rem;
     }
-
-    .footer a { color: #dff7ff; }
-
     @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-      .section { grid-column: 1 / -1; }
+      .hero, .grid { grid-template-columns: 1fr; }
+      .brand-title { white-space: normal; }
     }
-
-    @media (max-width: 640px) {
-      .wrap { width: min(calc(100% - 18px), var(--max)); }
-      .nav { align-items: flex-start; flex-direction: column; }
-      .nav-links { width: 100%; justify-content: flex-start; }
-      .hero-main, .tile, .section { padding: 20px; border-radius: 20px; }
-      .info-item { grid-template-columns: 1fr; }
-      .lead { font-size: 0.98rem; }
+    @media (max-width: 760px) {
+      .nav-toggle { display: inline-block; }
+      .nav-links {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: calc(100% + 12px);
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+        border-radius: 24px;
+        background: rgba(8, 14, 29, 0.94);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: 0.28s ease;
+      }
+      .nav-link { border-radius: 18px; text-align: center; }
+      #navcheck:checked ~ .nav-links {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+      #navcheck:checked + .nav-toggle span { opacity: 0; }
+      #navcheck:checked + .nav-toggle::before { transform: translateY(7px) rotate(45deg); }
+      #navcheck:checked + .nav-toggle::after { transform: translateY(-7px) rotate(-45deg); }
+      .nav-shell { position: relative; min-height: 76px; }
+      .hero-main, .mini-card, .section-card, .spotlight { padding: 22px; }
+      h1 { max-width: none; }
+      .detail { flex-direction: column; }
+      .detail span:last-child { text-align: left; }
+    }
+    @media (max-width: 480px) {
+      .wrap { width: min(var(--max), calc(100% - 18px)); }
+      .brand-badge { width: 42px; height: 42px; border-radius: 14px; }
+      .brand-title { font-size: 0.94rem; }
+      .lead { font-size: 1rem; }
+      .cta-row { flex-direction: column; }
+      .btn { text-align: center; }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap nav">
-      <div class="brand">
-        <div class="brand-badge">🎉</div>
-        <span>Digital Excellence Apps Development Studio</span>
-      </div>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="index.html" aria-label="Go to homepage">
+        <div class="brand-badge">✨</div>
+        <div class="brand-text">
+          <div class="eyebrow">Open Developer Profile</div>
+          <div class="brand-title">Digital Excellence Apps Development Studio</div>
+        </div>
+      </a>
+
+      <input type="checkbox" id="navcheck" />
+      <label for="navcheck" class="nav-toggle" aria-label="Open navigation menu"><span></span></label>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="support.html">Support</a>
-        <a href="marketing.html">Marketing</a>
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
+        <a class="nav-link" href="support.html">Support</a>
+        <a class="nav-link" href="marketing.html">Marketing</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
     <section class="hero">
-      <article class="glass hero-main">
-        <div class="eyebrow">Open developer profile • transparent app information</div>
+      <article class="card hero-main">
+        <div class="pill">Transparent app information • public developer presentation</div>
         <h1><span class="gradient-text">Joker’s Sparkle Party</span></h1>
         <p class="lead">
-          This page presents a clear overview of the application, the developer identity, and the principles behind this project.
-          It is designed to help users and Google Play reviewers quickly understand who created the app, how it is supported,
-          and what values guide its development.
+          This website provides a clear overview of the app, the developer identity, and the core principles behind this project.
+          It is designed for users and Google Play reviewers who need a direct, honest, and readable public profile.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="privacy-policy.html">View Privacy Policy</a>
-          <a class="button" href="support.html">Open Support Page</a>
-          <a class="button" href="marketing.html">Read Project Vision</a>
+        <div class="cta-row">
+          <a class="btn primary" href="privacy-policy.html">Read Privacy Policy</a>
+          <a class="btn" href="support.html">Open Support Page</a>
+          <a class="btn" href="marketing.html">See Project Vision</a>
         </div>
       </article>
 
-      <aside class="hero-side">
-        <section class="tile">
-          <h2>Developer Identity</h2>
+      <div class="hero-side">
+        <article class="card mini-card">
+          <h3>Developer Identity</h3>
           <p>
-            The app is published by <strong>Digital Excellence Apps Development Studio</strong>.
-            Public communication and support are handled through the account email listed below.
+            The application is published by <strong>Digital Excellence Apps Development Studio</strong>. Public communication and support are provided through the account email listed below.
           </p>
-          <div class="sparkline"></div>
-        </section>
-        <section class="tile">
-          <h2>Core Principle</h2>
+          <div class="accent-line"></div>
+        </article>
+        <article class="card mini-card">
+          <h3>Core Principle</h3>
           <p>
-            Clarity, simplicity, and honesty. The goal is to keep the project understandable for every user,
-            with direct information about privacy, support, and future monetization plans.
+            Clarity, honesty, and steady improvement. The goal is to keep the project understandable for every visitor, with direct information about privacy, support, and future plans.
           </p>
-        </section>
-      </aside>
+        </article>
+      </div>
     </section>
 
     <section class="grid">
-      <article class="section">
+      <article class="card section-card">
         <h2>About the Application</h2>
         <p>
           <strong>Joker’s Sparkle Party</strong> is presented as a creative entertainment app. This website exists to give a transparent,
@@ -405,59 +389,45 @@
         </div>
       </article>
 
-      <article class="section">
+      <article class="card section-card">
         <h2>Why This Website Exists</h2>
         <p>
-          This site was created to make the developer account more open and understandable. It brings together the essential public pages
-          that users and reviewers often expect to see: a privacy policy, a support page, and a marketing page with a clear explanation of the project’s goals.
+          This site was created to make the developer account more open and understandable. It connects all essential public pages:
+          a privacy policy, a support page, and a marketing page with a clear explanation of the project’s direction.
         </p>
       </article>
 
-      <article class="section full">
+      <article class="card section-card">
         <h2>Developer and App Details</h2>
-        <div class="info-list">
-          <div class="info-item">
-            <div class="label">App Name</div>
-            <div>Joker’s Sparkle Party</div>
-          </div>
-          <div class="info-item">
-            <div class="label">Developer Name</div>
-            <div>Digital Excellence Apps Development Studio</div>
-          </div>
-          <div class="info-item">
-            <div class="label">Contact Account</div>
-            <div><a href="mailto:janashaho647@gmail.com">janashaho647@gmail.com</a></div>
-          </div>
-          <div class="info-item">
-            <div class="label">Public Purpose</div>
-            <div>To provide transparent information about the app, support process, and privacy approach for users and reviewers.</div>
-          </div>
+        <div class="details-list">
+          <div class="detail"><span>Developer Name</span><span>Digital Excellence Apps Development Studio</span></div>
+          <div class="detail"><span>Application Name</span><span>Joker’s Sparkle Party</span></div>
+          <div class="detail"><span>Public Contact</span><span>janashaho647@gmail.com</span></div>
+          <div class="detail"><span>Public Goal</span><span>Open presentation for users and Google Play review</span></div>
         </div>
       </article>
 
-      <article class="section">
-        <h2>Open Communication</h2>
+      <article class="card section-card">
+        <h2>Quick Access</h2>
         <p>
-          Questions, support requests, and feedback can be sent by email. The support page explains how users can get help and what kind of response they can expect.
+          Every page is connected through a unified navigation system. On mobile devices, the navigation becomes a hamburger menu for cleaner and more comfortable browsing.
         </p>
-        <p><a class="button" href="support.html">Go to Support</a></p>
-      </article>
-
-      <article class="section">
-        <h2>Privacy at a Glance</h2>
-        <p>
-          The current privacy model is simple: no personal data collection, no storage of user data, and no transfer of user data to third parties.
-        </p>
-        <p><a class="button" href="privacy-policy.html">Read Privacy Policy</a></p>
+        <div class="cta-row">
+          <a class="btn" href="privacy-policy.html">Privacy</a>
+          <a class="btn" href="support.html">Support</a>
+          <a class="btn" href="marketing.html">Marketing</a>
+        </div>
       </article>
     </section>
-  </main>
 
-  <footer class="wrap footer">
-    <p>
-      © 2026 Digital Excellence Apps Development Studio • Built for transparency around Joker’s Sparkle Party •
-      <a href="marketing.html">Project vision</a>
-    </p>
-  </footer>
+    <section class="spotlight">
+      <h2>Public Transparency Statement</h2>
+      <p class="lead">
+        This website is intended to show an open and consistent picture of the developer account. Users and moderators can quickly see how privacy is handled, how support is provided, and what future direction the app may take.
+      </p>
+    </section>
+
+    <div class="footer">© Digital Excellence Apps Development Studio • Joker’s Sparkle Party</div>
+  </main>
 </body>
 </html>
