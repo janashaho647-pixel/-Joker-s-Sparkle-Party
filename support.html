@@ -3,132 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Support page for Joker’s Sparkle Party by Digital Excellence Apps Development Studio." />
+  <meta name="description" content="Support page for Joker’s Sparkle Party." />
   <title>Support | Joker’s Sparkle Party</title>
   <style>
-    :root {
-      --bg: #07131a;
-      --bg2: #0d1d27;
-      --card: rgba(255,255,255,0.06);
-      --text: #f2fcff;
-      --muted: #c6dde4;
-      --accent: #00d2c8;
-      --accent2: #73f0ff;
-      --border: rgba(255,255,255,0.12);
-      --shadow: 0 18px 50px rgba(0,0,0,0.34);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 0% 0%, rgba(0,210,200,0.17), transparent 30%),
-        radial-gradient(circle at 100% 10%, rgba(115,240,255,0.14), transparent 28%),
-        linear-gradient(180deg, var(--bg2), var(--bg));
-      min-height: 100vh;
-    }
-    .wrap { width: min(calc(100% - 24px), 1020px); margin: 0 auto; }
-    .nav {
-      display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 0; flex-wrap: wrap;
-    }
-    .nav a {
-      color: var(--text); text-decoration: none; padding: 10px 14px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09);
-    }
-    .hero {
-      display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; padding: 16px 0 20px;
-    }
-    .panel {
-      padding: 26px; border-radius: 28px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow);
-    }
-    h1 { margin: 0 0 12px; font-size: clamp(2rem, 6vw, 3.8rem); line-height: 1; }
-    h2 { margin-top: 0; }
-    p, li { color: var(--muted); line-height: 1.75; }
-    .contact-box {
-      display: grid; gap: 14px; margin-top: 18px;
-    }
-    .contact-item {
-      padding: 14px 16px; border-radius: 18px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
-    }
-    .grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; padding-bottom: 34px;
-    }
-    .grid .panel.full { grid-column: 1 / -1; }
-    .cta {
-      display: inline-block; margin-top: 12px; color: var(--text); text-decoration: none; padding: 12px 16px; border-radius: 999px;
-      background: linear-gradient(135deg, rgba(0,210,200,0.35), rgba(115,240,255,0.24)); border: 1px solid rgba(255,255,255,0.12);
-    }
-    ul { padding-left: 18px; }
-    @media (max-width: 760px) {
-      .hero, .grid { grid-template-columns: 1fr; }
-      .panel { padding: 20px; border-radius: 22px; }
-    }
+    :root { --bg-1:#07111f; --bg-2:#130d2d; --text:#ecf3ff; --muted:#b8c4dd; --line:rgba(255,255,255,.12); --accent-1:#7c5cff; --accent-2:#15d0ff; --accent-3:#ff59b2; --success:#7ef0c6; --shadow:0 24px 60px rgba(0,0,0,.35); --radius:26px; --max:1180px; }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(circle at 12% 18%, rgba(21,208,255,.16), transparent 28%),radial-gradient(circle at 88% 24%, rgba(124,92,255,.22), transparent 26%),radial-gradient(circle at 70% 82%, rgba(255,89,178,.14), transparent 24%),linear-gradient(135deg,var(--bg-1),var(--bg-2) 55%,#090d18 100%);min-height:100vh;overflow-x:hidden} body::before,body::after{content:"";position:fixed;width:320px;height:320px;border-radius:50%;filter:blur(70px);opacity:.22;pointer-events:none;z-index:0} body::before{top:110px;left:-100px;background:var(--accent-2)} body::after{right:-90px;bottom:60px;background:var(--accent-3)} a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 28px));margin:0 auto;position:relative;z-index:1}.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(7,13,27,.72);border-bottom:1px solid rgba(255,255,255,.08)}.nav-shell{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:84px}.brand{display:flex;align-items:center;gap:14px;min-width:0}.brand-badge{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent-1),var(--accent-3));box-shadow:0 10px 24px rgba(124,92,255,.35);font-size:1.3rem}.eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#95a7ca;margin-bottom:4px}.brand-title{font-size:1rem;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.nav-toggle{display:none;width:52px;height:52px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.04);cursor:pointer;padding:0}.nav-toggle span,.nav-toggle::before,.nav-toggle::after{content:"";display:block;width:22px;height:2px;background:#fff;margin:5px auto;border-radius:10px;transition:.3s ease}#navcheck{display:none}.nav-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.nav-link{padding:12px 18px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:rgba(255,255,255,.03);transition:.25s ease}.nav-link:hover,.nav-link.active{color:#fff;transform:translateY(-2px);border-color:rgba(126,240,198,.35);background:linear-gradient(135deg,rgba(124,92,255,.24),rgba(21,208,255,.14))}.hero{padding:36px 0 22px}.card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);position:relative;overflow:hidden}.card::before{content:"";position:absolute;inset:0;background:linear-gradient(130deg, rgba(124,92,255,.12), transparent 45%, rgba(21,208,255,.08) 75%, transparent);pointer-events:none}.hero-card,.section-card,.wide-card{padding:28px}.pill{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(126,240,198,.08);border:1px solid rgba(126,240,198,.22);color:#cbffe9;font-size:.92rem;margin-bottom:18px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.2rem,6vw,4.4rem);line-height:.98;margin-bottom:18px;letter-spacing:-.04em}.lead{color:var(--muted);font-size:1.06rem;line-height:1.75;max-width:70ch}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding-bottom:22px}.section-card p,.wide-card p{color:var(--muted);line-height:1.8}.support-list{display:grid;gap:14px;margin-top:18px}.support-item{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07)}.support-item strong{display:block;margin-bottom:8px}.footer{padding:0 0 40px;color:#96a6c5;text-align:center;font-size:.95rem}@media (max-width:900px){.grid{grid-template-columns:1fr}}@media (max-width:760px){.nav-toggle{display:inline-block}.nav-links{position:absolute;left:14px;right:14px;top:calc(100% + 12px);display:grid;gap:10px;padding:14px;border-radius:24px;background:rgba(8,14,29,.94);border:1px solid var(--line);box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(-10px);transition:.28s ease}.nav-link{text-align:center;border-radius:18px}#navcheck:checked ~ .nav-links{opacity:1;pointer-events:auto;transform:translateY(0)}#navcheck:checked + .nav-toggle span{opacity:0}#navcheck:checked + .nav-toggle::before{transform:translateY(7px) rotate(45deg)}#navcheck:checked + .nav-toggle::after{transform:translateY(-7px) rotate(-45deg)}.nav-shell{position:relative;min-height:76px}.hero-card,.section-card,.wide-card{padding:22px}}@media (max-width:480px){.wrap{width:min(var(--max),calc(100% - 18px))}.brand-title{font-size:.94rem}.lead{font-size:1rem}}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav class="nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="support.html">Support</a>
-      <a href="marketing.html">Marketing</a>
-    </nav>
-
-    <section class="hero">
-      <article class="panel">
-        <h1>Support</h1>
-        <p>
-          This page provides a direct support channel for users of <strong>Joker’s Sparkle Party</strong>.
-          The goal is to make communication easy, transparent, and accessible.
-        </p>
-        <div class="contact-box">
-          <div class="contact-item"><strong>Developer:</strong> Digital Excellence Apps Development Studio</div>
-          <div class="contact-item"><strong>Support Email:</strong> <a href="mailto:janashaho647@gmail.com">janashaho647@gmail.com</a></div>
-          <div class="contact-item"><strong>App:</strong> Joker’s Sparkle Party</div>
+  <header class="site-header">
+    <div class="wrap nav-shell">
+      <a class="brand" href="index.html">
+        <div class="brand-badge">✨</div>
+        <div>
+          <div class="eyebrow">Open Developer Profile</div>
+          <div class="brand-title">Digital Excellence Apps Development Studio</div>
         </div>
-        <a class="cta" href="mailto:janashaho647@gmail.com?subject=Support%20Request%20-%20Joker%E2%80%99s%20Sparkle%20Party">Contact Support</a>
-      </article>
+      </a>
+      <input type="checkbox" id="navcheck" />
+      <label for="navcheck" class="nav-toggle" aria-label="Open navigation menu"><span></span></label>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
+        <a class="nav-link active" href="support.html">Support</a>
+        <a class="nav-link" href="marketing.html">Marketing</a>
+      </nav>
+    </div>
+  </header>
 
-      <aside class="panel">
-        <h2>What You Can Write About</h2>
-        <ul>
-          <li>Technical issues or unexpected behavior</li>
-          <li>Questions about app usage</li>
-          <li>Suggestions for improvements</li>
-          <li>General feedback about the app experience</li>
-        </ul>
-      </aside>
+  <main class="wrap">
+    <section class="hero">
+      <article class="card hero-card">
+        <div class="pill">Direct and simple support information</div>
+        <h1>Support</h1>
+        <p class="lead">
+          This page provides a clear support route for <strong>Joker’s Sparkle Party</strong>. If users have questions,
+          technical issues, or feedback, they can contact the developer through the public account email below.
+        </p>
+      </article>
     </section>
 
     <section class="grid">
-      <article class="panel">
-        <h2>Support Approach</h2>
+      <article class="card section-card">
+        <h2>Support Contact</h2>
         <p>
-          As an independent developer, I aim to respond with respect, clarity, and a genuine effort to improve the product.
-          Every message helps shape future updates and improvements.
+          Public support email:<br>
+          <strong>janashaho647@gmail.com</strong>
         </p>
       </article>
-
-      <article class="panel">
-        <h2>Transparency</h2>
+      <article class="card section-card">
+        <h2>Who Provides Support</h2>
         <p>
-          This support page is part of a broader effort to present a clear and honest picture of the developer account.
-          Public information about privacy and project direction is available on the linked pages.
-        </p>
-      </article>
-
-      <article class="panel full">
-        <h2>Helpful Links</h2>
-        <p>
-          Use the pages below to learn more about the privacy model, developer overview, and the long-term vision for the project.
-        </p>
-        <p>
-          <a class="cta" href="privacy-policy.html">Privacy Policy</a>
-          <a class="cta" href="marketing.html">Marketing Page</a>
-          <a class="cta" href="index.html">Developer Overview</a>
+          Support is provided by <strong>Digital Excellence Apps Development Studio</strong>, the developer behind the app.
         </p>
       </article>
     </section>
-  </div>
+
+    <section class="card wide-card" style="margin-bottom:22px;">
+      <h2>What Users Can Write About</h2>
+      <div class="support-list">
+        <div class="support-item">
+          <strong>Technical Questions</strong>
+          App behavior, launch issues, device compatibility, or feature-related questions.
+        </div>
+        <div class="support-item">
+          <strong>Feedback and Suggestions</strong>
+          Ideas for improvement, interface comments, and suggestions for future updates.
+        </div>
+        <div class="support-item">
+          <strong>General Communication</strong>
+          Questions about the app, its purpose, or the public information shown on this website.
+        </div>
+      </div>
+    </section>
+
+    <section class="card wide-card" style="margin-bottom:22px;">
+      <h2>Support Approach</h2>
+      <p>
+        The support model is intentionally straightforward: a visible developer identity, a direct contact address, and a public set of pages that explain the app clearly.
+        The goal is to keep communication open, understandable, and easy to verify.
+      </p>
+    </section>
+
+    <div class="footer">© Digital Excellence Apps Development Studio • Support page for Joker’s Sparkle Party</div>
+  </main>
 </body>
 </html>
